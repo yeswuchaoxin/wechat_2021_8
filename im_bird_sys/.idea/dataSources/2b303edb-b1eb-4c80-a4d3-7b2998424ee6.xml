@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="im_bird@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="im_bird">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="aa"/>
+    <schema id="4" parent="1" name="book"/>
+    <schema id="5" parent="1" name="bookstore"/>
+    <schema id="6" parent="1" name="changgou_goods"/>
+    <schema id="7" parent="1" name="information_schema"/>
+    <schema id="8" parent="1" name="jspdb"/>
+    <schema id="9" parent="1" name="mall"/>
+    <schema id="10" parent="1" name="mysql"/>
+    <schema id="11" parent="1" name="mysql_4"/>
+    <schema id="12" parent="1" name="niit"/>
+    <schema id="13" parent="1" name="o2o"/>
+    <schema id="14" parent="1" name="performance_schema"/>
+    <schema id="15" parent="1" name="sb_myb_demo"/>
+    <schema id="16" parent="1" name="shop"/>
+    <schema id="17" parent="1" name="student"/>
+    <schema id="18" parent="1" name="test"/>
+    <schema id="19" parent="1" name="toutiao"/>
+    <schema id="20" parent="1" name="travel"/>
+    <schema id="21" parent="1" name="vueblog"/>
+    <table id="22" parent="2" name="chat_msg"/>
+    <table id="23" parent="2" name="friends_request"/>
+    <table id="24" parent="2" name="my_friends"/>
+    <table id="25" parent="2" name="users"/>
+    <column id="26" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="22" name="send_user_id">
+      <Position>2</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="22" name="accept_user_id">
+      <Position>3</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="22" name="msg">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="22" name="sign_flag">
+      <Position>5</Position>
+      <Comment>消息是否签收状态&#xd;
+1：签收&#xd;
+0：未签收&#xd;
+</Comment>
+      <DataType>int(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="22" name="create_time">
+      <Position>6</Position>
+      <Comment>发送请求的事件</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="32" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="33" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="23" name="send_user_id">
+      <Position>2</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="23" name="accept_user_id">
+      <Position>3</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="23" name="request_date_time">
+      <Position>4</Position>
+      <Comment>发送请求的事件</Comment>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="37" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="38" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="24" name="my_user_id">
+      <Position>2</Position>
+      <Comment>用户id</Comment>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="24" name="my_friend_user_id">
+      <Position>3</Position>
+      <Comment>用户的好友id</Comment>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="41" parent="24" name="my_user_id">
+      <ColNames>my_user_id
+my_friend_user_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="42" parent="24" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="43" parent="24" name="my_user_id">
+      <ColNames>my_user_id
+my_friend_user_id</ColNames>
+      <UnderlyingIndexName>my_user_id</UnderlyingIndexName>
+    </key>
+    <column id="44" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="25" name="username">
+      <Position>2</Position>
+      <Comment>用户名，账号，慕信号</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="25" name="password">
+      <Position>3</Position>
+      <Comment>密码</Comment>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="25" name="face_image">
+      <Position>4</Position>
+      <Comment>我的头像，如果没有默认给一张</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="25" name="face_image_big">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="25" name="nickname">
+      <Position>6</Position>
+      <Comment>昵称</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="25" name="qrcode">
+      <Position>7</Position>
+      <Comment>新用户注册后默认后台生成二维码，并且上传到fastdfs</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="25" name="cid">
+      <Position>8</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <index id="52" parent="25" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="53" parent="25" name="username">
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="54" parent="25" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="55" parent="25" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <key id="56" parent="25" name="username">
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>username</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
