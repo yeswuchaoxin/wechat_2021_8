@@ -32,5 +32,9 @@ spring:
     test-while-idle: true
     #检出连接时不要测试，否则影响性能
     test-on-borrow: false
-
+    #配置springmvc的视图解析器，前缀与后缀为指定的路径
+  mvc:
+    view:
+      prefix: /WEB-INF/pages/
+      suffix: .jsp
 
